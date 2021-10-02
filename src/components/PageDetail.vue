@@ -1,5 +1,6 @@
 <template>
   <div class="page-detail">
+
     <header>
       <p class="loaction"> 
         <img src="../assets/avocado.png" class="logo" alt="logo"/>
@@ -99,7 +100,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
   header{
     position: fixed;
     top: 0;
@@ -127,12 +128,15 @@ export default {
 
   button{
     margin-right: 10px;
+
+    img{
+      width : 100%;
+      height: 20px;
+      object-fit: cover;
+    }
   }
-  button img{
-    width : 100%;
-    height: 20px;
-    object-fit: cover;
-  }
+
+  
   header img{
     width: 20px;
     height: 20px;
@@ -151,7 +155,9 @@ export default {
 }
 
   .item-img{
-    width: 320px;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    width: 100%;
   }
   .selling-img{
     width: 100%;
@@ -163,7 +169,7 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-right: 20px;
+    padding-right: 10px;
     border-bottom: 1px solid #eee;
 
   }
@@ -198,10 +204,10 @@ export default {
   border: 1px solid #fff;
   border-radius: 5px;
   background: #eee;
-  }
+}
 
 .fresh-bar {
-  width: 30%;
+  width: 46%;
   height: 8px;
   border-radius: 5px;
   background-color: pink;
@@ -214,20 +220,20 @@ export default {
 .scrap{
   width:20px;
   height: 20px;
+  img{
+    
+    width:20px;
+    height: 20px;
+    object-fit: cover;
+  }
 }
 
-.scrap img{
-  
-  width:20px;
-  height: 20px;
-  object-fit: cover;
-}
 
 
 /* item-desc */
+
 .item-desc{
-  padding:10px 0;
-  margin-left: 10px;
+  padding:10px 0 10px 10px;
   border-bottom: 1px solid #eee;
   text-align: left;
 }
@@ -243,6 +249,7 @@ export default {
   color:#333;
   font-size: 12px;
 }
+
 
 /* itme-price */
 .item-price{
@@ -262,9 +269,7 @@ export default {
     font-size: 14px;
   
 }
-.total-price{
-  
-  }
+
 
 
 
@@ -280,11 +285,12 @@ export default {
   border-top: 1px solid #eee;
   background-color: #fff;
 
-    position: fixed;
-    bottom: 7%;
-    left: 0;
-    right: 0;
+  position: fixed;
+  bottom: 7%;
+  left: 0;
+  right: 0;
 }
+
 .recruit{
   width: 45%;
   font-size: 12px;
