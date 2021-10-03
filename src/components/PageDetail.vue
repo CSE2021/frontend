@@ -1,16 +1,7 @@
 <template>
   <div class="page-detail">
 
-    <header>
-      <p class="loaction"> 
-        <img src="../assets/avocado.png" class="logo" alt="logo"/>
-        심곡동
-      </p>
-      <div class="side-icon">
-        <button class="search"><img alt="search" src="../assets/search.png"/></button>
-        <button class="alram"><img alt="alram" src="../assets/alarm.png"/></button>
-      </div>
-    </header>
+    <Header/>
 
 
     <div class="item-detail">
@@ -64,84 +55,27 @@
     </div>
 
 
-
-    <footer>
-
-      <button class="home">
-        <img class="home-icon" src="../assets/home.png"/>
-        장보기
-      </button>
-
-      <button class="post">
-        <img class="post-icon" src="../assets/post.png"/>
-        글쓰기
-      </button>
-
-      <button class="chat">
-        <img class="chat-icon" src="../assets/chat.png"/>
-        채팅
-      </button>
-
-      <button class="mypage">
-        <img class="mypage-icon" src="../assets/user.png"/>
-        내정보
-      </button>
-      
-    </footer>
+    
   </div>
 </template>
 
 <script>
+import Header from './Header.vue';
+
+
 export default {
   name: 'PageDetail',
   props: {
 
+  },
+
+  components:{
+    Header : Header,
   }
 }
 </script>
 
 <style lang="scss">
-  header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-
-    padding: 10px 5px;
-    border-bottom: 1px solid #eee;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color:#fff;
-    font-weight: 700;
-  }
-
-  .logo{
-    margin-right: 5px;
-  }
-
-  header button{
-    width: 20px;
-    height: 20px;
-  }
-
-  button{
-    margin-right: 10px;
-
-    img{
-      width : 100%;
-      height: 20px;
-      object-fit: cover;
-    }
-  }
-
-  
-  header img{
-    width: 20px;
-    height: 20px;
-    object-fit: cover;
-  }
 
 
  /* body */
@@ -292,6 +226,7 @@ export default {
 }
 
 .recruit{
+  text-align: center;
   width: 45%;
   font-size: 12px;
 }
@@ -325,39 +260,5 @@ export default {
   font-weight: 500;
   color: #fff;
 }
-
-  footer{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
-    border-top: solid 1px #eee;
-    padding : 5px 0;
-    background-color: #fff;
-
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-
-  }
-
-  footer button{
-    width: 15%;
-    height: 15%;
-
-    font-size: 5px;
-  }
-
-  footer img{
-    display: block;
-    margin: 0 auto;
-    width: 15px;
-    height: 15px;
-  }
-
-  .content {
-    text-align: left;
-  }
 
 </style>
