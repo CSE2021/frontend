@@ -17,3 +17,8 @@ input {
   border: none;
   background-color: none;
 }
+
+a {
+  color: initial;
+  text-decoration: none;
+}

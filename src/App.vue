@@ -11,6 +11,9 @@
     <div v-if="step == 1">
       <Posting />
     </div>
+    <div v-if="step == 3">
+      <Mypage />
+    </div>
 
 
     <footer>
@@ -20,17 +23,17 @@
         장보기
       </button>
 
-      <button class="post" @click=" step=2 ">
+      <button class="post" @click=" step=1 ">
         <img class="post-icon" src="./assets/post.png"/>
         글쓰기
       </button>
 
-      <button class="chat" @click=" step=1" >
+      <button class="chat" @click=" step=2" >
         <img class="chat-icon" src="./assets/chat.png"/>
         채팅
       </button>
 
-      <button class="mypage">
+      <button class="mypage" @click=" step=3">
         <img class="mypage-icon" src="./assets/user.png"/>
         내정보
       </button>
@@ -43,6 +46,7 @@
 // import HelloWorld from './components/HelloWorld.vue'
 import PageDetail from './components/PageDetail.vue'
 import Posting from './components/Posting.vue'
+import Mypage from './components/Mypage.vue'
 import './style/reset.css'
 
 
@@ -58,6 +62,7 @@ export default {
     // HelloWorld,
     PageDetail,
     Posting,
+    Mypage,
   },
   props:{
   },
