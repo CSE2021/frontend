@@ -1,5 +1,5 @@
 <template>
-    <div class="register">
+    <v-app id="Register" class="register">
         <header class="header">
             <p class="loaction"> 
                 <img src="../assets/avocado.png" class="logo" alt="logo"/>
@@ -39,11 +39,13 @@
             </button>
         </div>
 
-    </div>
+    </v-app>
 </template>
 
 <script>
 export default {
+    name:'Register',
+    
     setup() {
         
     },

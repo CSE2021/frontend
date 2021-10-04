@@ -6,13 +6,15 @@
         가장 : 가볍게 장보자<br/>
         물건사러 가장!
       </p>
-      <button class="btn">회원가입 하기</button>
-      <button class="btn" @click=" login =1 ">로그인 하기</button>
+      <router-link to="/Register" class="btn">회원가입 하기</router-link>
+      <router-link to="/Login" class="btn">로그인 하기</router-link>
+      <router-view/>
     </div>
     <div class="logged-in" v-if="login ==1">
       <div v-if="step == 0">
         <!-- <HelloWorld /> -->
         <Register />
+        <Login />
       </div>
       <div v-if="step == 2">
         <PageDetail />
@@ -57,6 +59,7 @@ import PageDetail from './components/PageDetail.vue'
 import Posting from './components/Posting.vue'
 import Mypage from './components/Mypage.vue'
 import Register from './components/Register.vue'
+import Login from './components/Login.vue'
 import './style/reset.css'
 
 
@@ -75,6 +78,7 @@ export default {
     Posting,
     Mypage,
     Register,
+    Login,
   },
   props:{
   },
@@ -104,9 +108,9 @@ export default {
     font-weight: 700;
     margin-bottom: 50px;
   }
-  button{
+  .btn{
     width:80%;
-
+    max-width: 280px;
     margin: 10px 0;
   }
 }
