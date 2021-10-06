@@ -1,13 +1,20 @@
 <template>
-  <HelloWorld/>
+  <Chatting/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
+//import HelloWorld from './components/HelloWorld.vue';
+//  import ChatList from './components/ChatList.vue'
+  import Chatting from './components/Chatting.vue'
+
+
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Chatting
+   // HelloWorld,
+    //ChatList,
+    
   }
 }
 </script>
