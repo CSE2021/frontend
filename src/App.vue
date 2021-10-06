@@ -1,5 +1,5 @@
 <template>
-  <div class="app">
+<div class="app">
     <div v-if="step == 0">
       <!-- <HelloWorld /> -->
     </div>
@@ -61,7 +61,7 @@ export default {
   },
   props:{
   },
-}
+
 </script>
 
 <style lang="scss">
@@ -107,3 +107,4 @@ export default {
     text-align: left;
   }
 </style>
+
