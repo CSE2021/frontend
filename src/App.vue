@@ -44,15 +44,12 @@
 import PageDetail from './components/PageDetail.vue'
 import Posting from './components/Posting.vue'
 import './style/reset.css'
-
-
 export default {
   name: 'App',
   data(){
     return{
       step : 0,
     }
-
   },
   components: {
     // HelloWorld,
@@ -72,39 +69,35 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
-
  footer{
     display: flex;
     justify-content: space-around;
     align-items: center;
-
     border-top: solid 1px #eee;
     padding : 5px 0;
     background-color: #fff;
-
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-
   }
-
   footer button{
     width: 15%;
     height: 15%;
-
     font-size: 5px;
   }
-
   footer img{
     display: block;
     margin: 0 auto;
     width: 15px;
     height: 15px;
   }
-
   .content {
     text-align: left;
   }
+<<<<<<< HEAD
 </style>
 
+=======
+</style>
+>>>>>>> 3c0d43f74e1ecf63fdfb1cfce23a65d7f91a1c4e
