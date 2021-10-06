@@ -69,7 +69,7 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
- footer{
+footer{
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -95,9 +95,13 @@ export default {
   .content {
     text-align: left;
   }
-<<<<<<< HEAD
 </style>
 
-=======
-</style>
->>>>>>> 3c0d43f74e1ecf63fdfb1cfce23a65d7f91a1c4e
+
+
+
+
+
+
+
+
