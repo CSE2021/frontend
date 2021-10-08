@@ -48,7 +48,7 @@
             <div class="progress-bar"></div>
           </div>
         </div>
-        <button class="chat-btn">참여하기</button>
+        <button class="chat-btn btn">참여하기</button>
       </div>
         
 
@@ -247,18 +247,19 @@ export default {
   background: green;
 }
 
+.btn{
+  padding :5px 8px;
+  border-radius: 3px;
+  background-color: green;
+  color: #fff;
 
+}
 
 .chat-btn{
-  padding :5px 8px;
   width: 30%;
   height: 30px;
-  border-radius: 3px;
-
-  background-color: green;
   font-size: 12px;
   font-weight: 500;
-  color: #fff;
 }
 
 </style>

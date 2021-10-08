@@ -57,7 +57,8 @@ export default {
     Posting,
   },
   props:{
-  },
+  }
+}
 
 </script>
 
@@ -96,9 +97,6 @@ footer{
     text-align: left;
   }
 </style>
-
-
-
 
 
 
