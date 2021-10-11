@@ -1,9 +1,9 @@
 <template>
   <div class="chat-list">
-     <header class="header">
+    <header class="header">
         <p class="loaction"> 
-            <img src="../assets/avocado.png" class="logo" alt="logo"/>
-            역곡동
+            <img src="../../assets/avocado.png" class="logo" alt="logo"/>
+            마이페이지
         </p>
     </header>
 

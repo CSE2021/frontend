@@ -1,5 +1,6 @@
 <template>
-<div class="app">
+  <div class="main">
+    
     <div v-if="step == 0">
       <ItemList />
     </div>
@@ -15,28 +16,28 @@
     <div v-if="step == 3">
       <Mypage />
     </div>
-    
+      
 
 
     <footer>
 
       <button class="home" @click=" step=0">
-        <img class="home-icon" src="./assets/home.png"/>
+        <img class="home-icon" src="../assets/home.png"/>
         장보기
       </button>
 
       <button class="post" @click=" step=1">
-        <img class="post-icon" src="./assets/post.png"/>
+        <img class="post-icon" src="../assets/post.png"/>
         글쓰기
       </button>
 
       <button class="chat" @click=" step=2" >
-        <img class="chat-icon" src="./assets/chat.png"/>
+        <img class="chat-icon" src="../assets/chat.png"/>
         채팅
       </button>
 
       <button class="mypage" @click=" step=3">
-        <img class="mypage-icon" src="./assets/user.png"/>
+        <img class="mypage-icon" src="../assets/user.png"/>
         내정보
       </button>
       
@@ -45,13 +46,13 @@
 </template>
 
 <script >
-import ItemList from './components/ItemList.vue'
-import Posting from './components/Posting.vue'
-import ChatList from './components/ChatList.vue'
-import Mypage from './components/Mypage.vue'
-import './style/reset.css'
+import ItemList from './maintap/ItemList.vue'
+import Posting from './maintap/Posting.vue'
+import ChatList from './maintap/ChatList.vue'
+import Mypage from './maintap/Mypage.vue'
+
 export default {
-  name: 'App',
+  name: 'Main',
   data(){
     return{
       step : 0,
@@ -70,13 +71,7 @@ export default {
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 footer{
     display: flex;
     justify-content: space-around;

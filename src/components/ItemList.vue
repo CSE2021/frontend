@@ -1,13 +1,11 @@
 <template>
   <div class="main">
-    <div class="header">
-      <div class="logo">
-        <img class="logo-img" alt="logo" src="../assets/avocado.png"> 
-      </div>
-      <h3>가장:가볍게 장보자</h3>
-      <button class="search"><img alt="search" src="../assets/search.png"/></button>
-      <button class="alram"><img alt="alram" src="../assets/alarm.png"/></button>
-    </div>
+     <header class="header">
+        <p class="loaction"> 
+            <img src="../assets/avocado.png" class="logo" alt="logo"/>
+            역곡동
+        </p>
+    </header>
 
     <div class="body">
 
@@ -37,31 +35,12 @@
 
     </div>
 
-    <div class="footer">
-      <button class="home">
-        <img class="home-icon" src="../assets/home.png"/>
-        Home
-      </button>
-      <button class="post">
-        <img class="post-icon" src="../assets/post.png"/>
-        post
-      </button>
-      <button class="chat">
-        <img class="chat-icon" src="../assets/chat.png"/>
-        chat
-      </button>
-      <button class="mypage">
-        <img class="mypage-icon" src="../assets/user.png"/>
-        mypage
-      </button>
-      
-    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'ItemList',
   props: {
     
   }
@@ -75,13 +54,7 @@ export default {
   width: 320px;
 }
 
-.header {
-  width: 100%;
-  height: 50px;
-  border: 2px solid skyblue;
-  background-color: skyblue;
-  display: flex;
-  }
+
 .logo{
   display: inline-block;
   width:50px;

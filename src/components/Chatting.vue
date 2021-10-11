@@ -48,13 +48,6 @@ export default {
   width: 320px;
 }
 
-.header {
-  width: 100%;
-  height: 50px;
-  border: 2px solid skyblue;
-  background-color: skyblue;
-  display: flex;
-  }
 
 .logo {
     display: inline-block;
