@@ -9,11 +9,13 @@
 
     <div class="body">
       <div class="chatlist" v-for="(a,i) in 4 " :key="i">
-          <img class="thumbnail-img" alt="thumbnail-img" />
+        <div class="item-image">
+          <img  src="../assets/onion.jpeg" class="list-img" alt="item-img"/>
+        </div>
         <div class="chatroom">
           
           <h3 class="chat-title">양파 한 망</h3>
-          <h4 class="chat-preview">어디서 만나실래요?</h4>
+          <div class="chat-preview">어디서 만나실래요?</div>
         </div>
       </div>
       
@@ -34,9 +36,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only --> 
   
 <style>
-*{
-  width: 320px;
-}
+
 
 
 .logo {

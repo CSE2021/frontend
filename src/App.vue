@@ -49,6 +49,7 @@ import ItemList from './components/ItemList.vue'
 import Posting from './components/Posting.vue'
 import ChatList from './components/ChatList.vue'
 import Mypage from './components/Mypage.vue'
+// import PageDetail from './components/PageDetail.vue'
 import './style/reset.css'
 export default {
   name: 'App',
@@ -61,7 +62,8 @@ export default {
     ItemList,
     Posting,
     ChatList,
-    Mypage
+    Mypage,
+    // PageDetail
   },
   props:{
   }

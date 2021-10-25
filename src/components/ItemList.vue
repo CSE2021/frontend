@@ -9,8 +9,7 @@
 
     <div class="body">
 
-      <h2>사람들이 기다리는 물품들</h2>
-      <select>
+      <select class="select">
         <option value="판매" selected>판매</option>
         <option value="모집">모집</option>
       </select>
@@ -19,15 +18,18 @@
 
         <div class="list-item">
 
-          <img class="item-img" alt="item-img">
-
+          <div class="item-image">
+            <img  src="../assets/onion.jpeg" class="list-img" alt="item-img"/>
+          </div>
           <div class="content">
             <h4 class="item-title"><span class="division">[모집]</span>양파 한 망</h4>
             <p class="item-content">그린팜마트에서 양파 같이 사실분</p>
-            <div class="item-futter">
-              <div class="progress-bar">progress-bar</div>
-              <p class="price">원/인당</p>
+            <div class="item-footer">
+              <div class="progress">
+                <div class="progress-bar"></div>
+              </div>
             </div>
+              <div class="price">3000원/인당</div>
           </div>
 
         </div>
@@ -49,12 +51,29 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only --> 
   
-<style>
-*{
-  width: 320px;
+<style lang="scss">
+
+.select{
+  margin-bottom: 30px;
+  border : 1px solid #eee;
+  padding : 10px 0;
+.content{
+  width:230px;
 }
-
-
+}
+.list-item{
+  margin-bottom: 10px;
+}
+// .item-image{
+//   width: 50px;
+//   height: 50px;
+// }
+.list-img{
+  width: 85px;
+  height: 85px;
+  border-radius: 10px;
+  margin-right: 10px;
+}
 .logo{
   display: inline-block;
   width:50px;
@@ -95,7 +114,21 @@ h3{
 .content {
   text-align: left;
 }
-.item-futter {
+.item-content{
+  font-size:12px;
+}
+.item-footer {
   display: flex;
+
+  .progress{
+    width:30%;
+  }
+  
+}
+.price{
+  display: inline-block;
+    color:#333;
+  font-size: 12px;
+  line-height: 12px;
 }
 </style>
