@@ -2,7 +2,7 @@
     <v-app id="Register" class="register">
         <header class="header">
             <p class="loaction"> 
-                <img src="../assets/avocado.png" class="logo" alt="logo"/>
+                <img src="../assets/logo.png" class="logo" alt="logo"/>
                 회원가입
             </p>
         </header>

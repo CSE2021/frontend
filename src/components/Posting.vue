@@ -2,7 +2,7 @@
     <div class="posting">
         <header class="post-header">
             <div class="logo">
-                <img src="../assets/avocado.png" class="logo"/>
+                <img src="../assets/logo.png" class="logo"/>
             </div>
             <div class="header-title">게시글작성</div>
             <button class="post">완료</button>

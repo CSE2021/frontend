@@ -2,7 +2,7 @@
   <div class="main">
     <div class="header">
       <div class="logo">
-        <img class="logo-img" alt="logo" src="../assets/avocado.png"> 
+        <img class="logo-img" alt="logo" src="../assets/logo.png"> 
       </div>
       <h3>양파 거래방</h3>
       

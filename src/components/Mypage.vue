@@ -1,11 +1,5 @@
 <template>
     <div class="mypage">
-        <header class="header">
-            <p class="loaction"> 
-                <img src="../assets/avocado.png" class="logo" alt="logo"/>
-                마이페이지
-            </p>
-        </header>
         
         <div class="mypage-content">
             <div class="mypage-profile">

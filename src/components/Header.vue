@@ -1,9 +1,9 @@
 <template>
     <header class="header">
         <p class="loaction"> 
-        <img src="../assets/avocado.png" class="logo" alt="logo"/>
-        심곡동
+        <img src="../assets/logo.png" class="logo" alt="logo"/>
         </p>
+
         <div class="side-icon">
         <button class="icon-btn search"><img alt="search" src="../assets/search.png"/></button>
         <button class="icon-btn alram"><img alt="alram" src="../assets/alarm.png"/></button>
@@ -25,7 +25,7 @@ header {
     left: 0;
     right: 0;
     
-    height:50px;
+    height:49px;
 
     padding: 0 10px;
     border-bottom: 1px solid #eee;
@@ -36,25 +36,21 @@ header {
     background-color:#fff;
     font-weight: 700;
     .logo{
-        width: 20px;
-        height: 20px;
-        object-fit: cover;
-        margin-right: 5px;
+        width: 90px;
+        height: 30px;
+        object-fit: contain;
     }
 }
 
-.header button{
-    width: 20px;
-    height: 20px;
-}
 
 .icon-btn{
-    margin-right: 10px;
+    margin-left: 10px;
 
     img{
         width : 20px;
         height: 20px;
         object-fit: cover;
+        overflow: hidden;
     }
 
 }
