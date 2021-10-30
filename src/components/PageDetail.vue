@@ -1,7 +1,9 @@
 <template>
   <div class="page-detail">
 
-
+    <button class="back">
+      <img src='../assets/right.png' class='back' alt='back to last page'/>
+    </button>
     <div class="item-detail">
 
       <div class="item-img">
@@ -27,7 +29,7 @@
             <div class="present-price"><span>123000</span>원 모임</div>
             <div class="aim-price"><span>500000</span>원 목표</div>
           </div>
-          <div class="people"><span>13</span>명이 구매확정한 상품</div>
+          <div class="people"><span>13</span>명이 참여중인 상품</div>
           <div class="min-price"><span>10000</span>원 이상 구매가능</div>
         </div>
 
@@ -103,6 +105,7 @@
 <script>
 
 
+
 export default {
   name: 'PageDetail',
   props: {
@@ -116,7 +119,19 @@ export default {
 
 <style lang="scss">
 @import '../style/reset.scss';
-
+.back{
+  position: fixed;
+  background-color: none;
+  top: 10px;
+  left: 20px;
+  right: 0;
+  img{
+    width:20px;
+    height:20px;
+  }
+  padding:0;
+    
+}
  /* body */
 .item-detail{
   overflow-y:scroll; 

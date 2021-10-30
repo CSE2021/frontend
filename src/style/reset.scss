@@ -4,7 +4,9 @@ button {
   background-color: inherit;
   border: none;
 }
-
+* {
+  box-sizing: border-box;
+}
 p,
 body {
   margin: 0;
