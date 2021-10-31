@@ -17,7 +17,7 @@ const routes = [
     component: Posting,
   },
   {
-    path: "/Pagedetail",
+    path: "/Pagedetail/:id",
     name: Pagedetail,
     component: Pagedetail,
   },

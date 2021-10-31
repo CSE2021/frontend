@@ -9,7 +9,7 @@
       </div>
      
       <h2 class=list-title> 현재 모집중인 공동구매 </h2>
-      <a class="item-list" v-for="(a,i) in 4" :key="i" @click="fnView(`${row.i}`)">
+      <div class="item-list" v-for="(a,i) in 4" :key="i" @click="fnView(`${row.i}`)">
           <div class="item-image">
             <img  src="../assets/onion.jpeg" class="list-img" alt="item-img"/>
           </div>
@@ -27,7 +27,7 @@
             <div class="price">3000원 이상</div>
           </div>
 
-      </a>
+      </div>
 
     </div>
 
@@ -43,7 +43,8 @@ export default {
   methods: {
     fnView(num){
       this.body.num = num;
-			this.$router.push({path:'./PageDetail',query:this.body}); //추가한 상세페이지 라우터
+			this.$router.push({path:'/PageDetail/:id',query:this.body}); //추가한 상세페이지 라우터
+      console.log(this.body.num);
     }
 
   },
