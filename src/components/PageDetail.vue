@@ -4,19 +4,20 @@
     <button class="back">
       <img src='../assets/right.png' class='back' alt='back to last page'/>
     </button>
+
     <div class="item-detail">
 
       <div class="item-img">
-        <img src="../assets/item.jpeg" class="selling-img" alt="selling item"/>
+        <img src="../assets/seaweed.jpeg" class="selling-img" alt="selling item"/>
       </div>
 
 
       <div class="item-desc">
-        <h3 class="desc-title">[모집] 아이폰 13 pro 삽니다</h3>
+        <h3 class="desc-title">[최소수량 10봉] 조미김 공동구매 합니다</h3>
         <div class="item-sub">
           <p class="sub">상세 설명</p>
-          <p class="desc-description">이번 핑크 삽니다 가격 선제시 60hz 주사율 전보다 13그램
-            늘어난 무게 늘어난 배터링ㄹㅇㄹㄴ른ㅇ라ㅓ야런야
+          <p class="desc-description">쿠팡에서 사는 곰곰 조미김 대량구매합니다. 필요하신분 신청해주세요.
+            ㄹㅇㄹㅎㅎㅇㄹㄴㅎㄴㅌㅇㄹㅇㄹㄴㅇㄹㅇㄹㄴㅇㄹㄴㅇㄹㅇㄹ
           </p>
         </div>
 
@@ -68,7 +69,11 @@
               <option>수량 선택하기</option>
               <option v-for="(a,i) in 5" :key="i">{{(i+1)*10}}개</option>
           </select>
-          <button class="chat-btn btn">참여하기</button>
+          <!-- <button class="chat-btn btn"> -->
+          <router-link to="/complete" class="chat-btn btn">
+          참여하기
+          </router-link>
+          <!-- </button> -->
         </div>
         <p class="sub">수령 정보</p>
         <div class="additional-info">
@@ -122,8 +127,8 @@ export default {
 .back{
   position: fixed;
   background-color: none;
-  top: 10px;
-  left: 20px;
+  top: 13px;
+  left: 10px;
   right: 0;
   img{
     width:20px;

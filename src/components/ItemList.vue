@@ -3,29 +3,31 @@
 
 
     <div class="body">
-
+      <Header/>
       <div class="item-header">
         <div class="location">역곡동</div>
       </div>
      
       <h2 class=list-title> 현재 모집중인 공동구매 </h2>
-      <div class="item-list" v-for="(a,i) in 4" :key="i" @click="fnView(`${row.i}`)">
-          <div class="item-image">
-            <img  src="../assets/onion.jpeg" class="list-img" alt="item-img"/>
-          </div>
-          <div class="item-contents">
-            <h4 class="item-title">[최소수량 2봉] 조미김 공동구매 합니다</h4>
-            <div class="item-footer">
-              <div class="progress">
-                <div class="progress-bar"></div>
-                <span>199%</span>
-              </div>
-              <div class="end-time">3일 남음</div>
+      <div class="item-list" v-for="i in 4" :key="i" @click="fnView(i)">
+          <!-- <router-link to="{name: 'Pagedetail',params:{id:i}"> -->
+            <div class="item-image">
+              <img  src="../assets/seaweed.jpeg" class="list-img" alt="item-img"/>
             </div>
+            <div class="item-contents">
+              <h4 class="item-title">[최소수량 10봉] 조미김 공동구매 합니다</h4>
+              <div class="item-footer">
+                <div class="progress">
+                  <div class="progress-bar"></div>
+                  <span>23%</span>
+                </div>
+                <div class="end-time">3일 남음</div>
+              </div>
 
-            <p class="item-content">그린팜마트에서 양파 같이 사실분</p>
-            <div class="price">3000원 이상</div>
-          </div>
+              <p class="item-content">쿠팡에서 사는 곰곰 조미김 대량구매합니다. 필요하신분 신청해주세요.</p>
+              <div class="price">3000원 이상</div>
+            </div>
+          <!-- </router-link> -->
 
       </div>
 
@@ -35,19 +37,23 @@
 </template>
 
 <script>
+import Header from './Header.vue';
+
 export default {
   name: 'ItemList',
   props: {
     
   },
   methods: {
-    fnView(num){
-      this.body.num = num;
-			this.$router.push({path:'/PageDetail/:id',query:this.body}); //추가한 상세페이지 라우터
-      console.log(this.body.num);
+    fnView(id){
+      this.paramId =id;
+      let router = this.$router;
+      router.push({name:'Pagedetail', params:{productId:this.paramId}});
     }
-
   },
+  components: {
+    Header,
+  }
 }
 </script>
 

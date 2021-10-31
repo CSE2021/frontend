@@ -4,7 +4,7 @@
             <button class="back">
                 <img src='../assets/right.png' class='back' alt='back to last page'/>
             </button>
-            <p>공구 작성</p>
+            <p class="header-title">공구 작성</p>
             <button class="submit">저장하기</button>
         
         </header>
@@ -81,6 +81,12 @@ export default {
     .submit{
         margin:0;
     }
+}
+.header-title{
+    position: absolute;
+    left : 50%;
+    transform: translate(-50%, 0);
+
 }
 .adding{
     margin-bottom:30px;

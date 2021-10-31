@@ -1,23 +1,6 @@
 <template>
 <div class="app">
   <router-view></router-view>
-  <!-- <div v-if="step == 0">
-    <Header/>
-    <ItemList />
-  </div>
-
-  <div v-if="step == 1">
-    <Posting />
-  </div>
-  
-  <div v-if="step == 2">
-    <PageDetail/>
-  </div>
-
-  <div v-if="step == 3">
-    <Mypage />
-  </div> -->
-
 
 
   <footer>
@@ -29,22 +12,26 @@
       </router-link>
     </button>
 
-    <button class="post" @click=" step=1">
+    <button class="post" >
       <router-link to="/Post">
       <img class="post-icon" src="./assets/post.png"/>
-      모집완료
+      모집하기
       </router-link>
 
     </button>
 
-    <button class="chat" @click=" step=2" >
-      <img class="chat-icon" src="./assets/chat.png"/>
-      구매내역
+    <button class="chat" >
+      <router-link to="/GajangList/gj">
+        <img class="chat-icon" src="./assets/chat.png"/>
+        가장내역
+      </router-link>
     </button>
 
-    <button class="mypage" @click=" step=3">
-      <img class="mypage-icon" src="./assets/user.png"/>
-      내정보
+    <button class="mypage" >
+      <router-link  to="/mypage"> 
+        <img class="mypage-icon" src="./assets/user.png"/>
+        내정보
+      </router-link>
     </button>
     
   </footer>
@@ -52,11 +39,6 @@
 </template>
 
 <script >
-// import Header from './components/Header.vue'
-// import ItemList from './components/ItemList.vue'
-// import Posting from './components/Posting.vue'
-// import Mypage from './components/Mypage.vue'
-// import PageDetail from './components/PageDetail.vue'
 import './style/reset.scss'
 export default {
   name: 'App',
@@ -66,11 +48,6 @@ export default {
     }
   },
   components: {
-    // Header,
-    // ItemList,
-    // Posting,
-    // Mypage,
-    // PageDetail
   },
   props:{
   }
