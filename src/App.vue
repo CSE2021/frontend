@@ -4,7 +4,7 @@
 
 
   <footer>
-
+    <button @click="getData">눌러</button>
     <button class="home" >
       <router-link to="/">
       <img class="home-icon" src="./assets/home.png"/>
@@ -40,6 +40,9 @@
 
 <script >
 import './style/reset.scss'
+import axios from 'axios'
+axios.post()
+
 export default {
   name: 'App',
   data(){
@@ -50,6 +53,16 @@ export default {
   components: {
   },
   props:{
+  },
+  methods: {
+    getData(){
+      console.log('gksdfd');
+      axios.get('http://shbox.shop:3002/users/1')
+      .then(function(result) {
+        console.log('안녕');
+        console.log(result);
+      })
+    }
   }
 }
 
