@@ -8,8 +8,19 @@ import mypage from "./components/Mypage.vue";
 import GajangList from "./components/GajangList.vue";
 import apply from "./components/apply.vue";
 import gj from "./components/gj.vue";
+import Login from "./components/Login.vue";
 
 const routes = [
+  {
+    path: "/register",
+    name: "Register",
+    component: Register,
+  },
+  {
+    path: "/Login",
+    name: "Login",
+    component: Login,
+  },
   {
     path: "/",
     name: "ItemList",
