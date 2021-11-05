@@ -26,7 +26,7 @@
                 <div class="adding">
                     <p class="title">모집 시작일<span>*</span></p>
                     <input type="text" placeholder="예)20210101" class="input" v-model="recruit"/>
-                    <datepicker></datepicker>
+                    <datepicker ></datepicker>
                 </div>
 
                 <div class="adding">
