@@ -26,6 +26,8 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
     name: 'Posting',
     data(){
@@ -36,12 +38,16 @@ export default {
     },
     methods : {
         loginSubmit(){
+            // let urlPath = "signIn";
             let inputData = {};
-            inputData.userId = this.userId;
-            inputData.userPassword = this.userPassword;
+            inputData.signInId = this.userId;
+            inputData.password = this.userPassword;
     
             console.log(inputData);
-            this.$axios.post(`https://prod.kcook.site/app/sign-in`, 
+
+            axios.post(
+                // `https://prod.kcook.site/app/${urlPath}`, 
+                'https://prod.kcook.site/app/signIn', 
             // {signInId:this.userId, password:this.userPassword}
             JSON.stringify(inputData)
             )
@@ -50,7 +56,7 @@ export default {
                 this.$router.push("/");//성공 시 리스트 페이지 이동
             })
             .catch(error =>{
-                console.log('에러발생:',error);
+                console.log("에러발생:",error);
             })
 
     },
