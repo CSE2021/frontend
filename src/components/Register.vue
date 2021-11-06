@@ -1,53 +1,52 @@
 <template>
-    <v-app id="Register" class="register">
+    <div id="Register" class="register">
         <header class="posting-header">
             <button class="back">
                 <img src='../assets/right.png' class='back' alt='back to last page'/>
             </button>
             <p class="header-title">사용자 등록</p>
-            <button class="submit">저장</button>
+            <button class="submit">완료</button>
         
         </header>
 
-        <div class="regist-content">
+        <div @submit="checkForm" method="post" id="registerForm" class="regist-content">
                 <h3 class="regist-title">프로필 설정</h3>
             <div class="adding">
-                <p class="title">닉네임 입력<span>*</span></p>
-                <input type="text" placeholder="제목 입력" class="input" />
-                <button class="chat-btn btn">중복확인</button>
+                <label class="title">닉네임 입력<span>*</span></label>
+                <div class="nickname">
+                    <input type="text" placeholder="제목 입력" class="input" v-model="nickname"/>
+                    <button class="chat-btn btn" @click="isUnique">중복확인</button>
+                </div>
             </div>
-                <div class="adding">
-                <p class="title">사진 등록<span>*</span></p>
-                <input type="file" accept="image/*" placeholder="제목 입력" class="input-file" />
+            <div class="adding">
+                <label class="title">사진 등록<span>*</span></label>
+                <input type="file" accept="image/*" placeholder="사진등록" class="input-file"/>
             </div>
 
             <div class="self-auth adding">
                 <div class="adding">
-                    <p class="title">본인인증<span>*</span></p>
+                    <label class="title">본인인증<span>*</span></label>
                     <button class="chat-btn btn" @click="loginWithKakao">카카오 인증</button>
                 </div>
-                <!-- <form name="form_chk" method="post">
-                    <input type="hidden" name="m" value="checkplusService">
-                    <input type="hidden" name="EncodeData" value="">
-                </form> -->
-                
             </div>
+
             <div class="regional">
-                <h3 class="regist-title">거래지역 인증</h3>
+                <label class="regist-title">거래지역 인증<span>*</span></label>
                 <div id="map" class="map" style="width:100%;height:350px;">
                 </div>
-                <button class="nic btn">다른지역 선택하기</button>
+                <button class="chat-btn btn">다른지역 선택하기</button>
             </div>
-            <button class="submit btn">
+            <button class="chat-btn submit">
                 거래하러 가기!
             </button>
         </div>
 
-    </v-app>
+    </div>
 </template>
 
 
 <script >
+import axios from 'axios';
 // gps 연동
 
 // var gps_use = null; //gps의 사용가능 여부
@@ -94,11 +93,35 @@ export default {
 
     
     name:'Register',
-    
-    setup() {
-        
-    },
+    // const registerForm = new Vue({
+    //     el : 'registerForm',
+    //     data: {
+    //         errors: [],
+    //         name: null,
+    //         age: null,
+    //         movie: null
+    //     },
+    //     methods:{
+    //         checkForm: function (e) {
+    //         if (this.name && this.age) {
+    //             return true;
+    //         }
+
+    //         this.errors = [];
+
+    //         if (!this.name) {
+    //             this.errors.push('Name required.');
+    //         }
+    //         if (!this.age) {
+    //             this.errors.push('Age required.');
+    //         }
+
+    //   e.preventDefault();
+    // }
+//   }
+    // }),
     mounted() {
+
         if (window.kakao && window.kakao.maps) {
             this.initMap();
         } else {
@@ -110,6 +133,24 @@ export default {
         }
     },
     methods: {
+        //닉네임 중복확인 
+        isUnique() {
+            // let data = {
+            //     id: this.nickname
+            // }
+            let data = this.nickname; 
+            console.log(data);
+
+            axios.post('http://shbox.shop:3002/users/id-check',data)
+            .then(res=>{
+                console.log(res);
+                
+            })
+            .catch(error =>{
+                console.log(error);
+            })
+
+        },
         loginWithKakao() {
             try{
                 return new Promise((resolve,reject) =>{
@@ -170,8 +211,37 @@ export default {
 </script>
 
 <style lang="scss">
+.regist{
+    margin-bottom: 45px;
+}
+.nickname{
+    display: flex;
+    button{
+        margin-top:5px;
+        width: 40%;
+        padding :10px;
+    }
+    input{
+        margin-right : 20px;
+    }
+}
+
+// .input-file{
+
+//     #file-upload-button{
+//         border : 1px solid #009B4C;
+//         background-color: none;
+//     }
+// }
+
+label{
+    display: block;
+}
+
 .regist-content{
-    padding: 0 20px;
+    margin-bottom: 45px;
+    padding:  20px;
+
 }
 
 .regist-profile{
@@ -195,8 +265,6 @@ export default {
 
 .self-auth{
     padding: 10px 0 ;
-    border-bottom: 1px solid #eee;
-
     input{
         margin-right:20px;
         border-bottom: 1px solid green;

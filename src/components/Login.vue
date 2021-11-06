@@ -46,8 +46,7 @@ export default {
             console.log(inputData);
 
             axios.post(
-                // `https://prod.kcook.site/app/${urlPath}`, 
-                'https://prod.kcook.site/app/signIn', 
+                'http://prod.kcook-cake.com/app/sign-in', 
             // {signInId:this.userId, password:this.userPassword}
             JSON.stringify(inputData)
             )
