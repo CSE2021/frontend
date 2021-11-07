@@ -135,15 +135,18 @@ export default {
     methods: {
         //닉네임 중복확인 
         isUnique() {
-            // let data = {
-            //     id: this.nickname
-            // }
-            let data = this.nickname; 
+            let data = {
+                id: this.nickname
+            }
             console.log(data);
 
             axios.post('http://shbox.shop:3002/users/id-check',data)
             .then(res=>{
-                console.log(res);
+                if(res.data.result[0].exist ===1){
+                    console.log('중복되는 닉네임 입니다.')
+                }else{
+                    console.log('사용할 수 있는 닉네임 입니다.')
+                }
                 
             })
             .catch(error =>{
