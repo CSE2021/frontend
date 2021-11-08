@@ -8,157 +8,174 @@
             <button class="submit">저장하기</button>
         
         </header>
-        
 
-        
+       
+       
             <div class="posting-content">
+                <form @submit.prevent="onUpload">
+                    <div class="adding">
+                        <p class="title">공동구매 제목<span>*</span></p>
+                        <input type="text" placeholder="제목 입력" class="input" v-model="title"/>
+                    </div>
 
-                <div class="adding">
-                    <p class="title">공동구매 제목<span>*</span></p>
-                    <input type="text" placeholder="제목 입력" class="input" v-model="title"/>
-                </div>
+                    <div class="adding">
+                        <p class="title">대표 이미지<span>*</span></p>
+                        <input type="file" accept="image/*" placeholder="사진 선택" class="input-file" @change="onChange"/>
+                    </div>
 
-                <div class="adding">
-                    <p class="title">대표 이미지<span>*</span></p>
-                    <button>등록하기</button>
-                </div>
+                    <div class="adding">
+                        <p class="title">모집 시작일<span>*</span></p>
+                        <label for="start_recruite"></label>
+                        <Datepicker v-model="recruit" :enableTimePicker="false"></Datepicker>
+                    </div>
 
-                <div class="adding">
-                    <p class="title">모집 시작일<span>*</span></p>
-                    <input type="text" placeholder="예)20210101" class="input" v-model="recruit"/>
-                    <datepicker ></datepicker>
-                </div>
-
-                <div class="adding">
-                    <p class="title">모집 종료일<span>*</span></p>
-                    <input type="text" placeholder="예)20210101" class="input" v-model="recruite"/>
-                </div>
-                <div class="adding">
-                    <p class="title">배송 시작 예정일<span>*</span></p>
-                    <input type="text" placeholder="예)20210101" class="input" v-model="ship"/>
-                </div>
-                <div class="adding">
-                    <p class="title">배송 도착 예정일<span>*</span></p>
-                    <input type="text" placeholder="예)20210101" class="input" v-model="shipe"/>
-                </div>
-                <div class="adding">
-                    <p class="title">배부 시작 예정일<span>*</span></p>
-                    <input type="text" placeholder="예)20210101" class="input" v-model="share"/>
-                </div>
-                <div class="adding">
-                    <p class="title">배부 마감 예정일<span>*</span></p>
-                    <input type="text" placeholder="예)20210101" class="input" v-model="sharee"/>
-                </div>
-                <div class="adding">
-                    <p class="title">배부 예정 시간<span>*</span></p>
-                    <input type="text" placeholder="예)20210101" class="input" v-model="sharetime"/>
-                </div>
-                <div class="adding">
-                    <p class="title">배부 장소<span>*</span></p>
-                    <input type="text" placeholder="가톨릭대 김수환관 식당 앞" class="input" v-model="place"/>
-                </div>
-                <div class="adding">
-                    <p class="title">페이지 URL</p>
-                    <p class="desc">공동구매 하려는 사이트의 링크가 있다면 적어주세요.
-                        구매자가 구매를 선택할 때 도움을 줄 수 있습니다.</p>
-                    <input type="url" placeholder="https://" class="input" v-model="siteurl"/>
-                </div>
-                <div class="adding">
-                    <p class="title">최소 주문수량</p>
-                    <p class="desc">한명의 구매자가 구매해야 하는 수량을 지정해 주세요</p>
-                    <input type="text" placeholder="1개" class="input" v-model="mPrice"/>
-                </div>
-                <div class="adding">
-                    <p class="title">최대 주문수량</p>
-                    <p class="desc">이 구매수량이 늘어날 시, 더 이상의 모집을 받지 않습니다.</p>
-                    <input type="text" placeholder="100개" class="input" v-model="goal"/>
-                </div>
-                <div class="adding">
-                    <p class="title">상품설명</p>
-                    <input type="text" placeholder="100개" class="input" v-model="content"/>
-                </div>
-                <button class="chat-btn post-btn" type="submit" @click="submitForm">등록하기</button>
-
+                    <div class="adding">
+                        <p class="title">모집 종료일<span>*</span></p>
+                    <Datepicker v-model="recruite" :enableTimePicker="false"></Datepicker>
+                    </div>
+                    <div class="adding">
+                        <p class="title">배송 시작 예정일<span>*</span></p>
+                        <Datepicker v-model="ship" :enableTimePicker="false"></Datepicker>
+                    </div>
+                    <div class="adding">
+                        <p class="title">배송 도착 예정일<span>*</span></p>
+                        <Datepicker v-model="shipe" :enableTimePicker="false"></Datepicker>
+                    </div>
+                    <div class="adding">
+                        <p class="title">배부 시작 예정일<span>*</span></p>
+                        <Datepicker v-model="share" :enableTimePicker="false"></Datepicker>
+                    </div>
+                    <div class="adding">
+                        <p class="title">배부 마감 예정일<span>*</span></p>
+                        <Datepicker v-model="sharee" :enableTimePicker="false"></Datepicker>
+                    </div>
+                    <div class="adding">
+                        <p class="title">배부 예정 시간<span>*</span></p>
+                        <Datepicker v-model="time" timePicker ></Datepicker>
+                    </div>
+                    <div class="adding">
+                        <p class="title">배부 장소<span>*</span></p>
+                        <input type="text" placeholder="가톨릭대 김수환관 식당 앞" class="input" v-model="place"/>
+                    </div>
+                    <div class="adding">
+                        <p class="title">페이지 URL</p>
+                        <p class="desc">공동구매 하려는 사이트의 링크가 있다면 적어주세요.
+                            구매자가 구매를 선택할 때 도움을 줄 수 있습니다.</p>
+                        <input type="url" placeholder="https://" class="input" v-model="siteurl"/>
+                    </div>
+                    <div class="adding">
+                        <p class="title">최소 주문수량<span>*</span></p>
+                        <p class="desc">한명의 구매자가 구매해야 하는 수량을 지정해 주세요</p>
+                        <input type="text" placeholder="1개" class="input" v-model="mPrice"/>
+                    </div>
+                    <div class="adding">
+                        <p class="title">최대 주문수량<span>*</span></p>
+                        <p class="desc">이 구매수량이 늘어날 시, 더 이상의 모집을 받지 않습니다.</p>
+                        <input type="text" placeholder="100개" class="input" v-model="goal"/>
+                    </div>
+                    <div class="adding">
+                        <p class="title">상품설명<span>*</span></p>
+                        <input type="text" placeholder="100개" class="input" v-model="content"/>
+                    </div>
+                    <button class="chat-btn post-btn" type="submit" @click="submit" >등록하기</button>
+                </form>
             </div>
         
     </div>
 </template>
 
+
+
+
 <script>
 import axios from 'axios';
-import Datepicker from 'vuejs-datepicker';
+import dayjs from 'dayjs'
+import Datepicker from 'vue3-date-time-picker';
+import 'vue3-date-time-picker/dist/main.css'
+import {ref} from 'vue';
+
 
 export default {
+   
     components:{
-        Datepicker
+     Datepicker
     },
     name: 'Posting',
-    data(){
-        return { //집가서 타입 지정하기 
+    data: function(){
+        
+        return { 
+            
             wid: '1',
-            thumbnail: 'http://',
+            image: null,
             title: '',
-            recruit:'',
+            recruit: '',
             recruite: '',
             ship: '',
             shipe: '',
             share: '',
             sharee: '',
             place: '',
-            sharetime: '',
+            sharetime: this.time,
             mPrice: '',
             siteurl: '',
             goal: '',
             content: '',
 
-            date: new Date().toISOString().substr(0,10),
-            s_date: new Date().toISOString().substr(0,10),
-            e_date: new Date().toISOString().substr(0,10),
-            menu1: false,
-            menu2: false
+            
+
+        }
+     
+    },
+    setup(){
+        let time = ref({
+            hours: new Date().getHours(),
+            minutes: new Date().getMinutes()
+        });
+        return {
+            time,
         }
     },
+   
     methods: { // 메서드 구현
-    submitForm: function() {
-      var url = 'http://shbox.shop:3002/board/add';
-      //이 url로 데이터를 보내고 받을 수 있음
-      var data = {
-        wid: this.wid,
-        thumbnail: this.thumbnail,
-        title: this.title,
-        recruit: this.recruit,
-        recruite: this.recruite,
-        ship: this.ship,
-        shipe: this.shipe,
-        share: this.share,
-        sharee: this.sharee,
-        place: this.place,
-        sharetime: this.sharetime,
-        mPrice: this.mPrice,
-        siteurl: this.siteurl,
-        goal: this.goal,
-        content: this.content
-      }
-      console.log(data)
-      axios.post(url, data)
-        .then(res => {
-            console.log(res.data)
-        })
-        .catch(function(error){
-          console.log(error);
-        })
-    },
-    s_date_search(v){
-        this.s_date = v;
-        this.menu1 = false;
-        this.$refs.menu1.save(v);
-    },
-    e_date_search(v){
-        this.e_date = v;
-        this.menu2 = false;
-        this.$refs.menu2.save(v);
-    }
+        onChange(event){
+            this.image = event.target.files[0]
+        },
+        async submit(){
+            var url = 'http://shbox.shop:3002/board/add';
+
+            const formData = new FormData();
+            formData.append('wid',this.wid);
+            formData.append('img',this.image);
+            formData.append('title',this.title);
+            formData.append('recruit',dayjs(this.recruit).format("YYYYMMDD"));
+            formData.append('recruite',dayjs(this.recruite).format("YYYYMMDD"));
+            formData.append('ship',dayjs(this.ship).format("YYYYMMDD"));
+            formData.append('shipe',dayjs(this.shipe).format("YYYYMMDD"));
+            formData.append('share',dayjs(this.share).format("YYYYMMDD"));
+            formData.append('sharee',dayjs(this.sharee).format("YYYYMMDD"));
+            formData.append('place',this.place);
+            formData.append('sharetime',String(this.time.hours)+ String(this.time.minutes) +  "00"); 
+            formData.append('mPrice',this.mPrice);
+            formData.append('siteurl',this.siteurl);
+            formData.append('goal',this.goal);
+            formData.append('content',this.content);
+
+          
+
+            axios.post(url,formData)
+                .then(response => {
+                    console.log('response : ' , JSON.stringify(response,null))
+                }) .catch(error => {
+                    console.log('failed', error)
+                })
+        },
+
+        fileSelect(file){
+            this.image = file;
+        }
+   
   },
+  
 }
 
 
