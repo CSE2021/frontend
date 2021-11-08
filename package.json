@@ -22,8 +22,8 @@
     "vue-router": "^4.0.12",
     "vue3-date-time-picker": "^2.3.3",
     "vuejs-datepicker": "^1.6.2",
-    "weekstart": "^1.1.0",
-    "vuex": "^4.0.2"
+    "vuex": "^4.0.2",
+    "weekstart": "^1.1.0"
   },
   "devDependencies": {
     "@vue/cli": "^4.5.15",
