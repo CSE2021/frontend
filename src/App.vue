@@ -41,7 +41,7 @@
 <script >
 import './style/reset.scss'
 import axios from 'axios'
-axios.post()
+
 
 export default {
   name: 'App',

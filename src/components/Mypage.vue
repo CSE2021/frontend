@@ -31,6 +31,9 @@
             <a href="/" class="setting location">
                 버전정보
             </a>
+            <button class="chat-btn btn logout">
+                로그아웃
+            </button>
 
             
         </div>
