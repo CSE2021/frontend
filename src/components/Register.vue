@@ -5,7 +5,7 @@
                 <img src='../assets/right.png' class='back' alt='back to last page'/>
             </button>
             <p class="header-title">사용자 등록</p>
-            <button class="submit">완료</button>
+            <router-link class="submit" to="/">완료</router-link>
         
         </header>
 
@@ -14,7 +14,7 @@
             <div class="adding">
                 <label class="title">닉네임 입력<span>*</span></label>
                 <div class="nickname">
-                    <input type="text" placeholder="제목 입력" class="input" v-model="nickname"/>
+                    <input type="text" placeholder="닉네임 입력" class="input" v-model="nickname"/>
                     <button class="chat-btn btn" @click="isUnique">중복확인</button>
                 </div>
             </div>
@@ -26,19 +26,18 @@
             <div class="self-auth adding">
                 <div class="adding">
                     <label class="title">본인인증<span>*</span></label>
-                    <button class="chat-btn btn" @click="loginWithKakao">카카오 인증</button>
+                    <button class="chat-btn " @click="loginWithKakao">카카오 인증</button>
                 </div>
             </div>
 
             <div class="regional">
-                <label class="regist-title">거래지역 인증<span>*</span></label>
+                <div class="regi-top">
+                    <label class="regist-title">거래지역 인증<span>*</span></label>
+                    <button class=" btn">다른지역 선택</button>
+                </div>
                 <div id="map" class="map" style="width:100%;height:350px;">
                 </div>
-                <button class="chat-btn btn">다른지역 선택하기</button>
             </div>
-            <button class="chat-btn submit">
-                거래하러 가기!
-            </button>
         </div>
 
     </div>
@@ -264,6 +263,9 @@ label{
 .regist-title{
     font-size: 16px;
     margin-bottom: 5px;
+    span{
+        color:orangered;
+    }
 }
 
 .self-auth{
@@ -273,8 +275,16 @@ label{
         border-bottom: 1px solid green;
     }
 }
+.btn{
+    font-weight: 500;
+    padding:0;
+}
 .num{
     margin-bottom: 10px;
+}
+.regi-top{
+    display: flex;
+    justify-content:space-between;
 }
 
 .map{
@@ -285,4 +295,9 @@ label{
     margin : 0 auto;
     display: block;
 }
+.submit:active{
+    color: orangered;
+}
+
+
 </style>

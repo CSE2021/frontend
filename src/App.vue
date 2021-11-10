@@ -4,7 +4,7 @@
 
 
   <footer>
-    <button @click="getData">눌러</button>
+    <!-- <button @click="getData">눌러</button> -->
     <button class="home" >
       <router-link to="/">
       <img class="home-icon" src="./assets/home.png"/>

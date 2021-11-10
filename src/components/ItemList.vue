@@ -9,13 +9,56 @@
       </div>
      
       <h2 class=list-title> 현재 모집중인 공동구매 </h2>
+        <div class="item-list" @click="fnView(1)">
+        <!-- <router-link to="{name: 'Pagedetail',params:{id:i}"> -->
+          <div class="item-image">
+            <img  src="../assets/seaweed.jpeg" class="list-img" alt="item-img"/>
+          </div>
+          <div class="item-contents">
+            <h4 class="item-title">[최소수량 10봉] 조미김 공동구매 합니다</h4>
+            <div class="item-footer">
+              <div class="progress">
+                <div class="progress-bar pg-46"></div>
+                <span>46%</span>
+              </div>
+              <div class="end-time">3일 남음</div>
+            </div>
+
+            <p class="item-content">쿠팡에서 사는 곰곰 조미김 대량구매합니다. 필요하신분 신청해주세요.</p>
+            <div class="price">2000원 이상</div>
+          </div>
+        <!-- </router-link> -->
+        </div>
+
       <div class="item-list" @click="fnView(1)">
+
           <!-- <router-link to="{name: 'Pagedetail',params:{id:i}"> -->
             <div class="item-image">
-              <img  src="../assets/seaweed.jpeg" class="list-img" alt="item-img"/>
+              <img  src="../assets/musket.jpeg" class="list-img" alt="item-img"/>
             </div>
             <div class="item-contents">
-              <h4 class="item-title">[최소수량 10봉] 조미김 공동구매 합니다</h4>
+              <h4 class="item-title">그린팜 마트에서 산 샤인머스캣 나눠요</h4>
+              <div class="item-footer">
+                <div class="progress">
+                  <div class="progress-bar pg-81"></div>
+                  <span>81%</span>
+                </div>
+                <div class="end-time">5일 남음</div>
+              </div>
+
+              <p class="item-content">어제(11월 10일)그린팜 마트에서 산 샤인머스캣 맛보고 싶으신 분, 조금만 사고 싶으신분 환영합니다~ 신선해요</p>
+              <div class="price">2000원 이상</div>
+            </div>
+          </div>  
+          <!-- </router-link> -->
+
+          <div class="item-list">
+          <!-- <router-link to="{name: 'Pagedetail',params:{id:i}"> -->
+            <div class="item-image">
+              <img  src="../assets/market.jpeg" class="list-img" alt="item-img"/>
+            </div>
+            <div class="item-contents">
+              <h4 class="item-title">[지역광고] 역곡 상상시장 제일떡집</h4>
               <div class="item-footer">
                 <div class="progress">
                   <div class="progress-bar pg-46"></div>
@@ -24,12 +67,14 @@
                 <div class="end-time">3일 남음</div>
               </div>
 
-              <p class="item-content">쿠팡에서 사는 곰곰 조미김 대량구매합니다. 필요하신분 신청해주세요.</p>
-              <div class="price">2000원 이상</div>
+              <p class="item-content">바람떡, 꿀떡, 오메기 등등 많이 모이시면 많이 할인해드려요~~
+              5명 이상 -500원 할인, 20명 이상 - 1000원 할인
+              갯수로도 할인적용 가능합니다 :)</p>
+              <div class="price">3000원 이상</div>
             </div>
+          </div>
           <!-- </router-link> -->
 
-      </div>
       <div class="item-list">
           <!-- <router-link to="{name: 'Pagedetail',params:{id:i}"> -->
             <div class="item-image">
@@ -91,6 +136,8 @@
               <div class="price">10000원 이상</div>
             </div>
           <!-- </router-link> -->
+
+     
 
       </div>
 
@@ -161,7 +208,7 @@ export default {
 
 .list-img{
   width: 100%;
-  height: 45%;
+  height: 100vw;
   border-radius: 3px 3px 0 0 ;
 }
 .item-contents{
