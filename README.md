@@ -1,28 +1,47 @@
-#### 2021-2 종합설계프로젝트 집단지성팀 
+#### 2021-2 종합설계프로젝트 집단지성팀
+
 <div align="center">
-<h1 align=center>가장 : 가볍게 장보자 </h1>
-<p align="center">
-<img width="800" alt="스크린샷 2021-11-11 오전 11 42 13" src="https://user-images.githubusercontent.com/74878998/141227863-fbd784a9-4761-41bb-8e1d-37aa5010e392.png">
-</p>
-<strong align="center">1인가구를 위한 식품 거래 및 공동구매 플랫폼</strong><br/>
-가장을 소개합니다!
+  <h1 align=center>가장 : 가볍게 장보자 </h1>
+  <p align="center">
+    <img width="800" alt="스크린샷 2021-11-11 오전 11 42 13" src="https://user-images.githubusercontent.com/74878998/141227863-fbd784a9-4761-41bb-8e1d-37aa5010e392.png">
+  </p>
+  <strong align="center">1인가구를 위한 식품 거래 및 공동구매 플랫폼</strong><br/>
+  가장을 소개합니다!
 </div>
+
+<br/><br/>
 
 
 <h2 align=center> 👩🏻‍💻 가장을 만든 사람들 👨🏻‍💻 </h2>
 <p align="center">
-<img width="800" alt="스크린샷 2021-11-11 오전 11 50 51" src="https://user-images.githubusercontent.com/74878998/141228750-d5b70698-7cce-43e4-aa79-8fcc9c3eabc7.png">
-  </p>
+  <img width="800" alt="스크린샷 2021-11-11 오전 11 50 51" src="https://user-images.githubusercontent.com/74878998/141228750-d5b70698-7cce-43e4-aa79-8fcc9c3eabc7.png"/>
+</p>
+<br/><br/><br/>
+<h2 align=center> 가장에 사용된 frontend 기술 스택들 💻  </h2>
+<p align="center">
+  <img src="https://img.shields.io/badge/vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white"> <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white"> <img src="https://img.shields.io/badge/html-E34F26?style=for-the-badge&logo=html5&logoColor=white"> <img src="https://img.shields.io/badge/sass-CC6699?style=for-the-badge&logo=sass&logoColor=white">
 
-<h2 align=center> 가장에 사용된 기술 스택들💻⌨️ </h2>
-
-
+<br/><br/>
+</p>
 
 <h2 align=center> Frontend 기능구현 </h2>
 <p align="center">
-<img width="800" alt="스크린샷 2021-11-11 오후 12 19 54" src="https://user-images.githubusercontent.com/74878998/141231323-8a47e8a0-7c1c-4457-8a66-c30c94e45311.png">
-<img width="800" alt="스크린샷 2021-11-11 오후 12 21 04" src="https://user-images.githubusercontent.com/74878998/141231421-52364fdb-55af-4a30-9e10-b8af9af5d98f.png">
- </p>
-- 카카오 계정 로그인 연동
-- 카카오맵 api 연동
+  <img width="800" alt="스크린샷 2021-11-14 오후 3 37 04" src="https://user-images.githubusercontent.com/74878998/141670421-08c3fb1f-ca76-4d59-b848-7a6e085fc2ff.png">
+</p>
 
++ DB 상품리스트 불러오기
++ 참여 신청 내역 서버로 전송
+
+<p align="center">
+  <img width="800" alt="스크린샷 2021-11-11 오후 12 21 04" src="https://user-images.githubusercontent.com/74878998/141231421-52364fdb-55af-4a30-9e10-b8af9af5d98f.png">
+</p>
+
++ 카카오톡 소셜로그인
++ 카카오 맵 api 연동
+
+<h2 align=center> 중간발표 영상 </h2>
+<p align="center">
+
+  [![종합설계프로젝트2 - 집단지성팀 중간발표 영상](http://img.youtube.com/vi/NzndPWKdfys/0.jpg)](https://www.youtube.com/watch?v=NzndPWKdfys)<br/>
+  [https://www.youtube.com/watch?v=NzndPWKdfys](url)
+</p>
