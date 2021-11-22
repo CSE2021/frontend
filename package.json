@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@syncfusion/ej2-vue-calendars": "^19.3.46",
+    "@vue/babel-preset-app": "^4.5.15",
     "axios": "^0.24.0",
     "cors": "^2.8.5",
     "dayjs": "^1.10.7",

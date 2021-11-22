@@ -34,7 +34,7 @@ export default {
 
 <style lang="scss">
 .check{
-    margin: auto 0;
+    margin: 150px 0;
     vertical-align: center;
 }
 .goto{
