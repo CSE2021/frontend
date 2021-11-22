@@ -141,7 +141,7 @@ export default {
             this.image = event.target.files[0]
         },
         async submit(){
-            var url = 'http://shbox.shop:3002/board/add';
+            var url = 'http://shbox.shop:3002/board/post';
 
             const formData = new FormData();
             formData.append('wid',this.wid);
@@ -154,7 +154,7 @@ export default {
             formData.append('share',dayjs(this.share).format("YYYYMMDD"));
             formData.append('sharee',dayjs(this.sharee).format("YYYYMMDD"));
             formData.append('place',this.place);
-            formData.append('sharetime',String(this.time.hours)+ String(this.time.minutes) +  "00"); 
+            formData.append('sharetime',(("00"+this.time.hours.toString()).slice(-2))+ (("00"+this.time.hours.toString()).slice(-2)) +  "00"); 
             formData.append('mPrice',this.mPrice);
             formData.append('siteurl',this.siteurl);
             formData.append('goal',this.goal);
