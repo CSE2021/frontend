@@ -42,6 +42,6 @@
 <h2 align=center> 중간발표 영상 </h2>
 <p align="center">
 
-  [![종합설계프로젝트2 - 집단지성팀 중간발표 영상](http://img.youtube.com/vi/NzndPWKdfys/0.jpg)](https://www.youtube.com/watch?v=NzndPWKdfys)<br/>
-  [https://www.youtube.com/watch?v=NzndPWKdfys](url)
+  [![종합설계프로젝트2 - 집단지성팀 중간발표 영상](http://img.youtube.com/vi/NzndPWKdfys/0.jpg)](https://youtu.be/gkDq_8E4apw)<br/>
+  [https://youtu.be/gkDq_8E4apw](url)
 </p>
