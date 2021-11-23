@@ -28,9 +28,9 @@
               <p class="item-content">{{list.content}}</p>
               <div class="price">{{list.mprice}}원 이상</div>
             </div>
+          </div>
           <!-- </router-link> -->
 
-      </div>
       <div class="item-list">
           <!-- <router-link to="{name: 'Pagedetail',params:{id:i}"> -->
             <div class="item-image">
@@ -92,6 +92,8 @@
               <div class="price">10000원 이상</div>
             </div>
           <!-- </router-link> -->
+
+     
 
       </div>
 
@@ -184,7 +186,7 @@ export default {
 
 .list-img{
   width: 100%;
-  height: 45%;
+  height: 100vw;
   border-radius: 3px 3px 0 0 ;
 }
 .item-contents{
