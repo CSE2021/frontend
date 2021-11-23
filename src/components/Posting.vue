@@ -161,7 +161,7 @@ export default {
             formData.append('content',this.content);
 
           
-
+            
             axios.post(url,formData)
                 .then(response => {
                     console.log('response : ' , JSON.stringify(response,null))
@@ -169,7 +169,7 @@ export default {
                     console.log('failed', error)
                 })
         },
-
+        
         fileSelect(file){
             this.image = file;
         }
