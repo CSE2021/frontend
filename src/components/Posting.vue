@@ -15,47 +15,47 @@
                 <form @submit.prevent="onUpload">
                     <div class="adding">
                         <p class="title">공동구매 제목<span>*</span></p>
-                        <input type="text" placeholder="제목 입력" class="input" v-model="title"/>
+                        <input type="text" placeholder="제목 입력" class="input" v-model="title" required/>
                     </div>
 
                     <div class="adding">
                         <p class="title">대표 이미지<span>*</span></p>
-                        <input type="file" accept="image/*" placeholder="사진 선택" class="input-file" @change="onChange"/>
+                        <input type="file" accept="image/*" placeholder="사진 선택" class="input-file" @change="onChange" required/>
                     </div>
 
                     <div class="adding">
                         <p class="title">모집 시작일<span>*</span></p>
                         <label for="start_recruite"></label>
-                        <Datepicker v-model="recruit" :enableTimePicker="false"></Datepicker>
+                        <Datepicker v-model="recruit" :enableTimePicker="false" required ></Datepicker>
                     </div>
 
                     <div class="adding">
                         <p class="title">모집 종료일<span>*</span></p>
-                    <Datepicker v-model="recruite" :enableTimePicker="false"></Datepicker>
+                    <Datepicker v-model="recruite" :enableTimePicker="false" required></Datepicker>
                     </div>
                     <div class="adding">
                         <p class="title">배송 시작 예정일<span>*</span></p>
-                        <Datepicker v-model="ship" :enableTimePicker="false"></Datepicker>
+                        <Datepicker v-model="ship" :enableTimePicker="false" required></Datepicker>
                     </div>
                     <div class="adding">
                         <p class="title">배송 도착 예정일<span>*</span></p>
-                        <Datepicker v-model="shipe" :enableTimePicker="false"></Datepicker>
+                        <Datepicker v-model="shipe" :enableTimePicker="false" required></Datepicker>
                     </div>
                     <div class="adding">
                         <p class="title">배부 시작 예정일<span>*</span></p>
-                        <Datepicker v-model="share" :enableTimePicker="false"></Datepicker>
+                        <Datepicker v-model="share" :enableTimePicker="false" required></Datepicker>
                     </div>
                     <div class="adding">
                         <p class="title">배부 마감 예정일<span>*</span></p>
-                        <Datepicker v-model="sharee" :enableTimePicker="false"></Datepicker>
+                        <Datepicker v-model="sharee" :enableTimePicker="false" required></Datepicker>
                     </div>
                     <div class="adding">
                         <p class="title">배부 예정 시간<span>*</span></p>
-                        <Datepicker v-model="time" timePicker ></Datepicker>
+                        <Datepicker v-model="time" timePicker  required></Datepicker>
                     </div>
                     <div class="adding">
                         <p class="title">배부 장소<span>*</span></p>
-                        <input type="text" placeholder="가톨릭대 김수환관 식당 앞" class="input" v-model="place"/>
+                        <input type="text" placeholder="가톨릭대 김수환관 식당 앞" class="input" v-model="place" required/>
                     </div>
                     <div class="adding">
                         <p class="title">페이지 URL</p>
@@ -64,18 +64,18 @@
                         <input type="url" placeholder="https://" class="input" v-model="siteurl"/>
                     </div>
                     <div class="adding">
-                        <p class="title">최소 주문수량<span>*</span></p>
+                        <p class="title">최소 주문금액<span>*</span></p>
                         <p class="desc">한명의 구매자가 구매해야 하는 수량을 지정해 주세요</p>
-                        <input type="text" placeholder="1개" class="input" v-model="mPrice"/>
+                        <input type="text" placeholder="1개" class="input" v-model="mPrice" required/>
                     </div>
                     <div class="adding">
-                        <p class="title">최대 주문수량<span>*</span></p>
+                        <p class="title">주문 가능금액<span>*</span></p>
                         <p class="desc">이 구매수량이 늘어날 시, 더 이상의 모집을 받지 않습니다.</p>
-                        <input type="text" placeholder="100개" class="input" v-model="goal"/>
+                        <input type="text" placeholder="100개" class="input" v-model="goal" required/>
                     </div>
                     <div class="adding">
                         <p class="title">상품설명<span>*</span></p>
-                        <input type="text" placeholder="100개" class="input" v-model="content"/>
+                        <input type="text" placeholder="100개" class="input" v-model="content" required/>
                     </div>
                     <button class="chat-btn post-btn" type="submit" @click="submit" >등록하기</button>
                 </form>
