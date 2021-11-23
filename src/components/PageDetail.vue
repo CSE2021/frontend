@@ -16,8 +16,9 @@
         <h3 class="desc-title">[최소수량 10봉] 조미김 공동구매 합니다</h3>
         <div class="item-sub">
           <p class="sub">상세 설명</p>
-          <p class="desc-description">쿠팡에서 사는 곰곰 조미김 대량구매합니다. 필요하신분 신청해주세요.
-            ㄹㅇㄹㅎㅎㅇㄹㄴㅎㄴㅌㅇㄹㅇㄹㄴㅇㄹㅇㄹㄴㅇㄹㄴㅇㄹㅇㄹ
+          <p class="desc-description">쿠팡에서 사는 곰곰 조미김 대량구매합니다. 필요하신분 신청해주세요.<br>
+            최소 30봉 이상, 50만원 이하에서 신청 들어오면 그대로 진행하려고 합니다.<br>
+            입금은 시간순으로 마감하겠습니다.
           </p>
         </div>
 
@@ -70,7 +71,7 @@
               <option v-for="(a,i) in 5" :key="i">{{(i+1)*10}}개</option>
           </select>
           <!-- <button class="chat-btn btn"> -->
-          <router-link to="/complete" class="chat-btn btn">
+          <router-link to="/complete" class="chat-btn">
           참여하기
           </router-link>
           <!-- </button> -->
