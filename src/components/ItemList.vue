@@ -8,14 +8,15 @@
         <div class="location">역곡동</div>
       </div>
      
-      <h2 class=list-title> 현재 모집중인 공동구매 </h2>
-      <div class="item-list" @click="fnView(1)">
+      <h2 class="list-title" > 현재 모집중인 공동구매 </h2>
+
+      <div class="item-list" v-for="list in lists" :key="list" @click="fnView(1)">
           <!-- <router-link to="{name: 'Pagedetail',params:{id:i}"> -->
             <div class="item-image">
-              <img  src="../assets/seaweed.jpeg" class="list-img" alt="item-img"/>
+              <img  :src="list.thumbnail" class="list-img" alt="item-img"/>
             </div>
             <div class="item-contents">
-              <h4 class="item-title">[최소수량 10봉] 조미김 공동구매 합니다</h4>
+              <h4 class="item-title">{{list.title}}</h4>
               <div class="item-footer">
                 <div class="progress">
                   <div class="progress-bar pg-46"></div>
@@ -24,8 +25,8 @@
                 <div class="end-time">3일 남음</div>
               </div>
 
-              <p class="item-content">쿠팡에서 사는 곰곰 조미김 대량구매합니다. 필요하신분 신청해주세요.</p>
-              <div class="price">2000원 이상</div>
+              <p class="item-content">{{list.content}}</p>
+              <div class="price">{{list.mprice}}원 이상</div>
             </div>
           <!-- </router-link> -->
 
@@ -101,18 +102,40 @@
 
 <script>
 import Header from './Header.vue';
+import axios from 'axios';
+
 
 export default {
   name: 'ItemList',
   props: {
     
   },
+  data () {
+    return {
+      lists: [],
+      pageNum: 1,
+    };
+  },
   methods: {
     fnView(id){
       this.paramId =id;
       let router = this.$router;
       router.push({name:'Pagedetail', params:{productId:this.paramId}});
+    },
+    getData(pageNum){
+      axios.get("http://shbox.shop:3002/board/list/" + pageNum)
+      .then((reseponse) => {
+        console.log(reseponse);
+        this.lists = reseponse.data.result;
+        
+      })
+      .catch(err => {
+        console.log(err);
+      });
     }
+  },
+  mounted(){
+    this.getData(this.pageNum);
   },
   components: {
     Header,
