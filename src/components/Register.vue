@@ -5,7 +5,7 @@
                 <img src='../assets/right.png' class='back' alt='back to last page'/>
             </button>
             <p class="header-title">사용자 등록</p>
-            <button class="submit">완료</button>
+            <router-link class="submit" to="/">완료</router-link>
         
         </header>
 
@@ -14,9 +14,11 @@
             <div class="adding">
                 <label class="title">닉네임 입력<span>*</span></label>
                 <div class="nickname">
-                    <input type="text" placeholder="제목 입력" class="input" v-model="nickname"/>
+                    <input type="text" placeholder="닉네임 입력" class="input" v-model="nickname"/>
                     <button class="chat-btn btn" @click="isUnique">중복확인</button>
                 </div>
+                <span class="badge nav" v-if="availableNick == 2" >이미 사용중인 닉네임입니다.</span>
+                <span class="badge av" v-if="availableNick == 1" >사용가능한 닉네임입니다.</span>
             </div>
             <div class="adding">
                 <label class="title">사진 등록<span>*</span></label>
@@ -26,19 +28,18 @@
             <div class="self-auth adding">
                 <div class="adding">
                     <label class="title">본인인증<span>*</span></label>
-                    <button class="chat-btn btn" @click="loginWithKakao">카카오 인증</button>
+                    <button class="chat-btn " @click="loginWithKakao">카카오 인증</button>
                 </div>
             </div>
 
             <div class="regional">
-                <label class="regist-title">거래지역 인증<span>*</span></label>
+                <div class="regi-top">
+                    <label class="regist-title">거래지역 인증 <span>*</span></label>
+                    <button class=" btn">다른지역 선택</button>
+                </div>
                 <div id="map" class="map" style="width:100%;height:350px;">
                 </div>
-                <button class="chat-btn btn">다른지역 선택하기</button>
             </div>
-            <button class="chat-btn submit">
-                거래하러 가기!
-            </button>
         </div>
 
     </div>
@@ -90,7 +91,11 @@ import axios from 'axios';
 
 
 export default {
-
+    data() {
+        return {
+        availableNick : 0,
+        }
+    },
     
     name:'Register',
     // const registerForm = new Vue({
@@ -132,6 +137,7 @@ export default {
             document.head.appendChild(script);
         }
     },
+
     methods: {
         //닉네임 중복확인 
         isUnique() {
@@ -140,12 +146,12 @@ export default {
             }
             console.log(data);
 
-            axios.post('http://shbox.shop:3002/users/id-check',data)
+            axios.post('http://shbox.shop:3002/users/idCheck',data)
             .then(res=>{
                 if(res.data.result[0].exist ===1){
-                    console.log('중복되는 닉네임 입니다.')
+                    this.availableNick = 2;
                 }else{
-                    console.log('사용할 수 있는 닉네임 입니다.')
+                    this.availableNick = 1;
                 }
                 
             })
@@ -232,7 +238,6 @@ export default {
 // .input-file{
 
 //     #file-upload-button{
-//         border : 1px solid #009B4C;
 //         background-color: none;
 //     }
 // }
@@ -240,7 +245,10 @@ export default {
 label{
     display: block;
 }
-
+.badge{
+    font-size: 12px;
+    font-weight: 600;
+}
 .regist-content{
     margin-bottom: 45px;
     padding:  20px;
@@ -250,7 +258,6 @@ label{
 .regist-profile{
     display: flex;
     padding: 10px 0;
-    border-bottom: 1px solid #eee;
 
 }
 
@@ -259,22 +266,36 @@ label{
     height: 30px;
     padding: 10px;
     border-radius: 35px;
-    border: 1px solid green;
 }
 .regist-title{
     font-size: 16px;
     margin-bottom: 5px;
+    span{
+        color:orangered;
+    }
 }
 
 .self-auth{
     padding: 10px 0 ;
     input{
         margin-right:20px;
-        border-bottom: 1px solid green;
     }
+}
+.btn{
+    font-weight: 500;
+    padding:0;
+}
+.chat-btn{
+    background-color: #009B4C;
+    border-radius: 3px;
+    color: #fff;
 }
 .num{
     margin-bottom: 10px;
+}
+.regi-top{
+    display: flex;
+    justify-content:space-between;
 }
 
 .map{
@@ -285,4 +306,9 @@ label{
     margin : 0 auto;
     display: block;
 }
+.submit:active{
+    color: #006934;
+}
+
+
 </style>
