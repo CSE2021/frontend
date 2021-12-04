@@ -50,6 +50,8 @@
 import axios from 'axios';
 // gps 연동
 
+
+
 // var gps_use = null; //gps의 사용가능 여부
 // var gps_lat = null; // 위도
 // var gps_lng = null; // 경도
@@ -146,7 +148,7 @@ export default {
             }
             console.log(data);
 
-            axios.post('http://shbox.shop:3002/users/idCheck',data)
+            axios.post('http://shbox.shop:3002/users/nameCheck',data)
             .then(res=>{
                 if(res.data.result[0].exist ===1){
                     this.availableNick = 2;
